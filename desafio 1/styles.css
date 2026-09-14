@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Esta linha importa a fonte 'Montserrat' do Google Fonts para ser usada na página.
+   Ela garante que o navegador carregue e utilize essa família de fontes. */
+
+*{
+    /* O seletor universal '*' aplica as propriedades a TODOS os elementos HTML da página. */
+    font-family: 'Montserrat', sans-serif;
+    /* Define a fonte padrão para todos os elementos como 'Montserrat'.
+       'sans-serif' é um fallback caso a Montserrat não carregue. */
+    margin: 0;
+    /* Remove a margem externa padrão de todos os elementos.
+       Isso é um reset comum para ter controle total sobre os espaçamentos. */
+    padding: 0;
+    /* Remove o preenchimento interno (padding) padrão de todos os elementos.
+       Também é parte do reset para controle total de espaçamento. */
+    box-sizing: border-box;
+    /* Define o Box Model para 'border-box'. Isso significa que a largura e altura de um elemento incluirão o padding e a borda, tornando o dimensionamento
+       mais intuitivo e previsível (o tamanho que você define é o tamanho final). */
+}
+
+header{
+    /* Estilos para o elemento <header> (cabeçalho da página). */
+    margin: 44px 0 144px 76px;
+    /* Define as margens externas do header:
+       - 44px no topo.
+       - 0px na direita.
+       - 144px na parte inferior.
+       - 76px na esquerda.
+       (Essas são margens fixas que podem causar problemas de layout em telas menores). */
+}
+
+.link-header{
+    /* Estilos para os links de navegação dentro do header (elementos com a classe 'link-header'). */
+    font-weight: 600;
+    /* Define a espessura da fonte (negrito médio). */
+    font-size: 24px;
+    /* Define o tamanho da fonte como 24 pixels (valor fixo). */
+    line-height: 29px;
+    /* Define a altura da linha do texto como 29 pixels. */
+    color: #989d99;
+    /* Define a cor do texto para um tom de cinza. */
+    cursor: pointer;
+    /* Altera o cursor do mouse para uma "mãozinha" ao passar sobre o link,
+       indicando que é clicável. */
+    margin-right: 23px;
+    /* Define uma margem de 23 pixels à direita de cada link. */
+}
+
+.button-header{
+    /* Estilos para o botão de "Sign up" no header (elemento com a classe 'button-header'). */
+    background: #665ae1;
+    /* Define a cor de fundo do botão como um tom de roxo/azul. */
+    border-radius: 20.5px;
+    /* Arredonda os cantos do botão em 20.5 pixels, criando um formato mais oval. */
+    width: 130px;
+    /* Define a largura fixa do botão em 130 pixels. */
+    height: 41px;
+    /* Define a altura fixa do botão em 41 pixels. */
+    border: none;
+    /* Remove a borda padrão do botão. */
+    font-weight: 600;
+    /* Define a espessura da fonte do texto do botão como 600 (negrito médio). */
+    font-size: 24px;
+    /* Define o tamanho da fonte do texto do botão como 24 pixels (valor fixo). */
+    line-height: 29px;
+    /* Define a altura da linha do texto do botão como 29 pixels. */
+    color: #ffffff;
+    /* Define a cor do texto do botão como branco. */
+    cursor: pointer;
+    /* Altera o cursor do mouse para uma "mãozinha" ao passar sobre o botão. */
+}
+
+.img-logo{
+    /* Estilos para a imagem principal (elemento com a classe 'img-logo'). */
+    width: 568px;
+    /* Define a largura fixa da imagem em 568 pixels.
+       (Isso pode fazer a imagem transbordar em telas menores). */
+    height: 500px;
+    /* Define a altura fixa da imagem em 500 pixels. */
+    margin-left: 125px;
+    /* Define uma margem de 125 pixels à esquerda da imagem. */
+    display: inline-block;
+    /* Faz com que a imagem se comporte como um elemento de bloco, mas que possa
+       ficar na mesma linha que outros elementos 'inline-block'. */
+}
+
+section{
+    /* Estilos para a seção de conteúdo principal (elemento <section>). */
+    display: inline-block;
+    /* Faz com que a seção se comporte como um elemento de bloco, mas que possa
+    ficar na mesma linha que outros elementos 'inline-block'.
+       (Junto com a imagem, isso cria o layout de duas colunas no desktop). */
+    margin-left: 86px;
+    /* Define uma margem de 86 pixels à esquerda da seção. */
+}
+
+h1{
+    /* Estilos para o título principal (elemento <h1>). */
+    font-weight: 900;
+    /* Define a espessura da fonte como 900 (extra negrito). */
+    font-size: 100px;
+    /* Define o tamanho da fonte como 100 pixels (muito grande para a maioria das telas). */
+    line-height: 122px;
+    /* Define a altura da linha do texto como 122 pixels. */
+    color: #515151;
+    /* Define a cor do texto para um tom de cinza escuro. */
+}
+
+h2{
+    /* Estilos para o subtítulo (elemento <h2>). */
+    font-weight: 500;
+    /* Define a espessura da fonte como 500 (negrito médio). */
+    font-size: 58px;
+    /* Define o tamanho da fonte como 58 pixels (também grande). */
+    line-height: 71px;
+    /* Define a altura da linha do texto como 71 pixels. */
+    color: #515151;
+    /* Define a cor do texto para um tom de cinza escuro. */
+}
+
+p{
+    /* Estilos para o parágrafo de texto (elemento <p>). */
+    font-weight: 400;
+    /* Define a espessura da fonte como 400 (normal). */
+    font-size: 24px;
+    /* Define o tamanho da fonte como 24 pixels (fixo). */
+    line-height: 29px;
+    /* Define a altura da linha do texto como 29 pixels. */
+    color: #848484;
+    /* Define a cor do texto para um tom de cinza mais claro. */
+    width: 515px;
+    /* Define a largura fixa do parágrafo em 515 pixels.
+       (Isso pode fazer o texto transbordar em telas menores que 515px). */
+    margin-top: 32px;
+    /* Define uma margem de 32 pixels no topo do parágrafo. */
+    margin-bottom: 65px;
+    /* Define uma margem de 65 pixels na parte inferior do parágrafo. */
+}
+
+.button-main{
+    /* Estilos para o botão principal na seção de conteúdo (elemento com a classe 'button-main'). */
+    background: #adff00;
+    /* Define a cor de fundo do botão como um verde-limão. */
+    border-radius: 30px;
+    /* Arredonda os cantos do botão em 30 pixels, tornando-o bem arredondado. */
+    width: 239px;
+    /* Define a largura fixa do botão em 239 pixels. */
+    height: 64px;
+    /* Define a altura fixa do botão em 64 pixels. */
+    border: none;
+    /* Remove a borda padrão do botão. */
+    cursor: pointer;
+    /* Altera o cursor do mouse para uma "mãozinha" ao passar sobre o botão. */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    /* Adiciona uma sombra projetada (drop-shadow) ao botão:
+       - 0px de deslocamento horizontal.
+       - 4px de deslocamento vertical.
+       - 4px de raio de desfoque.
+       - Cor preta com 25% de opacidade. */
+    font-weight: 700;
+    /* Define a espessura da fonte do texto do botão como 700 (negrito). */
+    font-size: 28px;
+    /* Define o tamanho da fonte do texto do botão como 28 pixels (fixo). */
+    line-height: 34px;
+    /* Define a altura da linha do texto do botão como 34 pixels. */
+    color: #000000;
+    /* Define a cor do texto do botão como preto. */
+}
+
+@media screen and (max-width: 800px) {
+    /* Início da Media Query: Estas regras de CSS serão aplicadas SOMENTE quando
+       a largura da tela (viewport) for de 800 pixels ou MENOS.
+       Isso é usado para adaptar o layout para tablets e celulares. */
+
+    header{
+        /* Estilos para o header dentro da media query. */
+        display: none;
+        /* Oculta completamente o header em telas com largura de até 800px. */
+    }
+
+    main{
+        /* Estilos para o elemento <main> dentro da media query. */
+        display: flex;
+        /* Transforma o main em um container flexível. */
+        flex-direction: column;
+        /* Altera a direção dos itens flexíveis para coluna, ou seja,
+           a imagem e a seção de texto serão empilhadas verticalmente. */
+        align-items: center;
+        /* Centraliza os itens flexíveis horizontalmente dentro do main. */
+    }
+
+    .img-logo{
+        /* Estilos para a imagem principal dentro da media query. */
+        width: 90%;
+        /* A imagem ocupa 90% da largura disponível do seu container pai (main).
+           Isso a torna responsiva e evita transbordamento. */
+        height: auto;
+        /* A altura é ajustada automaticamente para manter a proporção da imagem,
+           evitando que ela fique distorcida. */
+        margin: 180px 5px 0 5px;
+        /* Define as margens da imagem:
+           - 180px no topo (empurra para baixo).
+           - 5px na direita.
+           - 0px na parte inferior.
+           - 5px na esquerda.
+           (Ainda usa pixels fixos para margens laterais, que podem ser melhorados com 'auto' ou 'padding'). */
+    }
+
+    section{
+        /* Estilos para a seção de conteúdo principal dentro da media query. */
+        margin: 0 auto;
+        /* Centraliza a seção horizontalmente (0px de margem superior/inferior,
+           'auto' para margens laterais iguais). */
+        width: 90%;
+        /* A seção ocupa 90% da largura disponível do seu container pai (main). */
+        text-align: center;
+        /* Centraliza todo o texto dentro da seção. */
+        padding-top: 5%;
+        /* Adiciona um preenchimento interno de 5% da largura do pai no topo da seção. */
+    }
+
+    h1{
+        /* Estilos para o título principal (h1) dentro da media query. */
+        font-size: 50px;
+        /* Reduz o tamanho da fonte para 50 pixels para telas menores. */
+        line-height: 58px;
+        /* Ajusta a altura da linha para 58 pixels. */
+    }
+
+    h2{
+        /* Estilos para o subtítulo (h2) dentro da media query. */
+        font-size: 28px;
+        /* Reduz o tamanho da fonte para 28 pixels para telas menores. */
+        line-height: 34px;
+        /* Ajusta a altura da linha para 34 pixels. */
+    }
+
+    p{
+        /* Estilos para o parágrafo (p) dentro da media query. */
+        display: none;
+        /* Oculta completamente o parágrafo em telas com largura de até 800px. */
+    }
+
+    button{
+        /* Estilos para TODOS os botões dentro da media query.
+           (Este seletor genérico pode não ser o ideal se houver mais de um botão visível). */
+        margin: 15px auto;/* Adiciona uma margem de 15px no topo/inferior e centraliza o botão horizontalmente. */
+    }
+}
