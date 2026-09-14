@@ -22,10 +22,10 @@ header{
     /* Estilos para o elemento <header> (cabeçalho da página). */
     margin: 44px 0 144px 76px;
     /* Define as margens externas do header:
-       - 44px no topo.
-       - 0px na direita.
-       - 144px na parte inferior.
-       - 76px na esquerda.
+        - 44px no topo.
+        - 0px na direita.
+        - 144px na parte inferior.
+        - 76px na esquerda.
        (Essas são margens fixas que podem causar problemas de layout em telas menores). */
 }
 
