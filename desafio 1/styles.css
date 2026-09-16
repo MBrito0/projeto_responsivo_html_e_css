@@ -1,249 +1,191 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/* Esta linha importa a fonte 'Montserrat' do Google Fonts para ser usada na página.
-   Ela garante que o navegador carregue e utilize essa família de fontes. */
+/* Importa a fonte 'Montserrat' do Google Fonts. */
 
 *{
-    /* O seletor universal '*' aplica as propriedades a TODOS os elementos HTML da página. */
-    font-family: 'Montserrat', sans-serif;
-    /* Define a fonte padrão para todos os elementos como 'Montserrat'.
-       'sans-serif' é um fallback caso a Montserrat não carregue. */
-    margin: 0;
-    /* Remove a margem externa padrão de todos os elementos.
-       Isso é um reset comum para ter controle total sobre os espaçamentos. */
-    padding: 0;
-    /* Remove o preenchimento interno (padding) padrão de todos os elementos.
-       Também é parte do reset para controle total de espaçamento. */
-    box-sizing: border-box;
-    /* Define o Box Model para 'border-box'. Isso significa que a largura e altura de um elemento incluirão o padding e a borda, tornando o dimensionamento
-       mais intuitivo e previsível (o tamanho que você define é o tamanho final). */
+    /* Reseta estilos padrão para todos os elementos. */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte padrão. */
+    margin: 0; /* Remove margem externa padrão. */
+    padding: 0; /* Remove preenchimento interno padrão. */
+    box-sizing: border-box; /* Inclui padding e borda na largura/altura. */
+}
+
+body {
+    /* Garante que o corpo ocupe 100% da largura da tela. */
+    width: 100vw;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna por padrão. */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport. */
 }
 
 header{
-    /* Estilos para o elemento <header> (cabeçalho da página). */
-    margin: 44px 0 144px 76px;
-    /* Define as margens externas do header:
-        - 44px no topo.
-        - 0px na direita.
-        - 144px na parte inferior.
-        - 76px na esquerda.
-       (Essas são margens fixas que podem causar problemas de layout em telas menores). */
+    /* Estilos para o cabeçalho. */
+    display: flex; /* Transforma o cabeçalho em um container flexível. */
+    justify-content: space-between; /* Distribui os itens (links e botão) com espaço entre eles. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    padding: 44px 76px; /* Preenchimento para desktop. */
+    width: 100%; /* Ocupa a largura total. */
+}
+
+.header-links-container {
+    display: flex; /* Transforma este container em flex para organizar os links */
+    align-items: center;
+    gap: 23px; /* AQUI! Define o espaçamento DE 23px ENTRE cada link */
 }
 
 .link-header{
-    /* Estilos para os links de navegação dentro do header (elementos com a classe 'link-header'). */
-    font-weight: 600;
-    /* Define a espessura da fonte (negrito médio). */
-    font-size: 24px;
-    /* Define o tamanho da fonte como 24 pixels (valor fixo). */
-    line-height: 29px;
-    /* Define a altura da linha do texto como 29 pixels. */
-    color: #989d99;
-    /* Define a cor do texto para um tom de cinza. */
-    cursor: pointer;
-    /* Altera o cursor do mouse para uma "mãozinha" ao passar sobre o link,
-       indicando que é clicável. */
-    margin-right: 23px;
-    /* Define uma margem de 23 pixels à direita de cada link. */
+    /* Estilos para os links de navegação no cabeçalho. */
+    font-weight: 600; /* Espessura da fonte. */
+    font-size: 1.2rem; /* Tamanho da fonte relativo. */
+    line-height: 1.5; /* Altura da linha relativa. */
+    color: #989d99; /* Cor do texto. */
+    cursor: pointer; /* Muda o cursor para indicar clicável. */
+    transition: color 0.3s ease; /* Transição suave para a cor. */
+}
+
+.link-header:hover {
+    color: #665ae1; /* Muda a cor para o roxo do botão ao passar o mouse. */
 }
 
 .button-header{
-    /* Estilos para o botão de "Sign up" no header (elemento com a classe 'button-header'). */
-    background: #665ae1;
-    /* Define a cor de fundo do botão como um tom de roxo/azul. */
-    border-radius: 20.5px;
-    /* Arredonda os cantos do botão em 20.5 pixels, criando um formato mais oval. */
-    width: 130px;
-    /* Define a largura fixa do botão em 130 pixels. */
-    height: 41px;
-    /* Define a altura fixa do botão em 41 pixels. */
-    border: none;
-    /* Remove a borda padrão do botão. */
-    font-weight: 600;
-    /* Define a espessura da fonte do texto do botão como 600 (negrito médio). */
-    font-size: 24px;
-    /* Define o tamanho da fonte do texto do botão como 24 pixels (valor fixo). */
-    line-height: 29px;
-    /* Define a altura da linha do texto do botão como 29 pixels. */
-    color: #ffffff;
-    /* Define a cor do texto do botão como branco. */
-    cursor: pointer;
-    /* Altera o cursor do mouse para uma "mãozinha" ao passar sobre o botão. */
+    /* Estilos para o botão de "Sign up" no cabeçalho. */
+    background: #665ae1; /* Cor de fundo. */
+    border-radius: 20.5px; /* Arredondamento dos cantos. */
+    padding: 10px 20px; /* Preenchimento para melhor adaptação. */
+    border: none; /* Remove a borda. */
+    font-weight: 600; /* Espessura da fonte. */
+    font-size: 1.2rem; /* Tamanho da fonte relativo. */
+    color: #ffffff; /* Cor do texto. */
+    cursor: pointer; /* Muda o cursor para indicar clicável. */
+    white-space: nowrap; /* Evita que o texto do botão quebre. */
+    transition: background 0.3s ease; /* Transição suave para o fundo. */
+}
+
+.button-header:hover {
+    background: #5044c4; /* Escurece o botão ao passar o mouse. */
+}
+
+/* Container principal para a imagem e a seção de texto */
+main {
+    display: flex; /* Transforma o main em um container flexível. */
+    flex-direction: row; /* Itens em linha por padrão (desktop). */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    justify-content: center; /* Centraliza os itens horizontalmente. */
+    flex-grow: 1; /* Permite que o main ocupe o espaço restante verticalmente. */
+    padding: 50px 5%; /* Preenchimento responsivo. */
+    gap: 50px; /* Espaçamento entre a imagem e a seção de texto. */
 }
 
 .img-logo{
-    /* Estilos para a imagem principal (elemento com a classe 'img-logo'). */
-    width: 568px;
-    /* Define a largura fixa da imagem em 568 pixels.
-       (Isso pode fazer a imagem transbordar em telas menores). */
-    height: 500px;
-    /* Define a altura fixa da imagem em 500 pixels. */
-    margin-left: 125px;
-    /* Define uma margem de 125 pixels à esquerda da imagem. */
-    display: inline-block;
-    /* Faz com que a imagem se comporte como um elemento de bloco, mas que possa
-       ficar na mesma linha que outros elementos 'inline-block'. */
+    /* Estilos para a imagem principal. */
+    max-width: 568px; /* Largura máxima da imagem, como no design original. */
+    width: 45%; /* A imagem ocupará no máximo 45% da largura do seu container. */
+    height: auto; /* A altura se ajusta proporcionalmente à largura. */
+    display: block; /* Garante que a imagem se comporte como um bloco. */
 }
 
 section{
-    /* Estilos para a seção de conteúdo principal (elemento <section>). */
-    display: inline-block;
-    /* Faz com que a seção se comporte como um elemento de bloco, mas que possa
-    ficar na mesma linha que outros elementos 'inline-block'.
-       (Junto com a imagem, isso cria o layout de duas colunas no desktop). */
-    margin-left: 86px;
-    /* Define uma margem de 86 pixels à esquerda da seção. */
+    /* Estilos para a seção de conteúdo principal. */
+    width: 45%; /* A seção ocupará 45% da largura do seu container. */
+    max-width: 580px; /* Limita a largura máxima da seção de texto. */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos internos da seção em coluna. */
+    align-items: flex-start; /* Alinha o texto à esquerda por padrão. */
 }
 
 h1{
-    /* Estilos para o título principal (elemento <h1>). */
-    font-weight: 900;
-    /* Define a espessura da fonte como 900 (extra negrito). */
-    font-size: 100px;
-    /* Define o tamanho da fonte como 100 pixels (muito grande para a maioria das telas). */
-    line-height: 122px;
-    /* Define a altura da linha do texto como 122 pixels. */
-    color: #515151;
-    /* Define a cor do texto para um tom de cinza escuro. */
+    /* Estilos para o título principal. */
+    font-weight: 900; /* Espessura da fonte. */
+    font-size: clamp(3rem, 6vw, 6.25rem); /* Tamanho da fonte fluido. */
+    line-height: 1.2; /* Altura da linha relativa. */
+    color: #515151; /* Cor do texto. */
 }
 
 h2{
-    /* Estilos para o subtítulo (elemento <h2>). */
-    font-weight: 500;
-    /* Define a espessura da fonte como 500 (negrito médio). */
-    font-size: 58px;
-    /* Define o tamanho da fonte como 58 pixels (também grande). */
-    line-height: 71px;
-    /* Define a altura da linha do texto como 71 pixels. */
-    color: #515151;
-    /* Define a cor do texto para um tom de cinza escuro. */
+    /* Estilos para o subtítulo. */
+    font-weight: 500; /* Espessura da fonte. */
+    font-size: clamp(2rem, 3.5vw, 3.625rem); /* Tamanho da fonte fluido. */
+    line-height: 1.2; /* Altura da linha relativa. */
+    color: #515151; /* Cor do texto. */
 }
 
 p{
-    /* Estilos para o parágrafo de texto (elemento <p>). */
-    font-weight: 400;
-    /* Define a espessura da fonte como 400 (normal). */
-    font-size: 24px;
-    /* Define o tamanho da fonte como 24 pixels (fixo). */
-    line-height: 29px;
-    /* Define a altura da linha do texto como 29 pixels. */
-    color: #848484;
-    /* Define a cor do texto para um tom de cinza mais claro. */
-    width: 515px;
-    /* Define a largura fixa do parágrafo em 515 pixels.
-       (Isso pode fazer o texto transbordar em telas menores que 515px). */
-    margin-top: 32px;
-    /* Define uma margem de 32 pixels no topo do parágrafo. */
-    margin-bottom: 65px;
-    /* Define uma margem de 65 pixels na parte inferior do parágrafo. */
+    /* Estilos para o parágrafo de texto. */
+    font-weight: 400; /* Espessura da fonte. */
+    font-size: clamp(1rem, 1.2vw, 1.5rem); /* Tamanho da fonte fluido. */
+    line-height: 1.5; /* Altura da linha relativa. */
+    color: #848484; /* Cor do texto. */
+    max-width: 515px; /* Largura máxima. */
+    width: 100%; /* Ocupa 100% da largura disponível. */
+    margin-top: 2rem; /* Margem superior relativa. */
+    margin-bottom: 3rem; /* Margem inferior relativa. */
 }
 
 .button-main{
-    /* Estilos para o botão principal na seção de conteúdo (elemento com a classe 'button-main'). */
-    background: #adff00;
-    /* Define a cor de fundo do botão como um verde-limão. */
-    border-radius: 30px;
-    /* Arredonda os cantos do botão em 30 pixels, tornando-o bem arredondado. */
-    width: 239px;
-    /* Define a largura fixa do botão em 239 pixels. */
-    height: 64px;
-    /* Define a altura fixa do botão em 64 pixels. */
-    border: none;
-    /* Remove a borda padrão do botão. */
-    cursor: pointer;
-    /* Altera o cursor do mouse para uma "mãozinha" ao passar sobre o botão. */
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    /* Adiciona uma sombra projetada (drop-shadow) ao botão:
-       - 0px de deslocamento horizontal.
-       - 4px de deslocamento vertical.
-       - 4px de raio de desfoque.
-       - Cor preta com 25% de opacidade. */
-    font-weight: 700;
-    /* Define a espessura da fonte do texto do botão como 700 (negrito). */
-    font-size: 28px;
-    /* Define o tamanho da fonte do texto do botão como 28 pixels (fixo). */
-    line-height: 34px;
-    /* Define a altura da linha do texto do botão como 34 pixels. */
-    color: #000000;
-    /* Define a cor do texto do botão como preto. */
+    /* Estilos para o botão principal na seção de conteúdo. */
+    background: #665ae1; /* Cor de fundo. */
+    border-radius: 32px; /* Arredondamento dos cantos. */
+    padding: 15px 30px; /* Preenchimento. */
+    border: none; /* Remove a borda. */
+    font-weight: 900; /* Espessura da fonte. */
+    font-size: 1.5rem; /* Tamanho da fonte relativo. */
+    color: #ffffff; /* Cor do texto. */
+    cursor: pointer; /* Muda o cursor para indicar clicável. */
+    white-space: nowrap; /* Evita que o texto do botão quebre. */
+    transition: background 0.3s ease; /* Transição suave para o hover. */
 }
 
-@media screen and (max-width: 800px) {
-    /* Início da Media Query: Estas regras de CSS serão aplicadas SOMENTE quando
-       a largura da tela (viewport) for de 800 pixels ou MENOS.
-       Isso é usado para adaptar o layout para tablets e celulares. */
+.button-main:hover {
+    background: #5044c4; /* Escurece o botão ao passar o mouse. */
+}
 
+/* ==================================================================================== */
+/* MEDIA QUERIES para Responsividade */
+/* ==================================================================================== */
+
+/* Estilos para Telas Menores (como iPhone, tablets pequenos - até 800px de largura) */
+@media screen and (max-width: 800px) {
     header{
-        /* Estilos para o header dentro da media query. */
-        display: none;
-        /* Oculta completamente o header em telas com largura de até 800px. */
+        display: none; /* Oculta o cabeçalho em telas menores. */
     }
 
     main{
-        /* Estilos para o elemento <main> dentro da media query. */
-        display: flex;
-        /* Transforma o main em um container flexível. */
-        flex-direction: column;
-        /* Altera a direção dos itens flexíveis para coluna, ou seja,
-           a imagem e a seção de texto serão empilhadas verticalmente. */
-        align-items: center;
-        /* Centraliza os itens flexíveis horizontalmente dentro do main. */
+        flex-direction: column; /* Empilha a imagem e a seção de texto verticalmente. */
+        align-items: center; /* Centraliza os itens flexíveis horizontalmente. */
+        padding: 30px 20px; /* Preenchimento responsivo. */
+        gap: 30px; /* Espaçamento entre a imagem e a seção de texto. */
     }
 
     .img-logo{
-        /* Estilos para a imagem principal dentro da media query. */
-        width: 90%;
-        /* A imagem ocupa 90% da largura disponível do seu container pai (main).
-           Isso a torna responsiva e evita transbordamento. */
-        height: auto;
-        /* A altura é ajustada automaticamente para manter a proporção da imagem,
-           evitando que ela fique distorcida. */
-        margin: 180px 5px 0 5px;
-        /* Define as margens da imagem:
-           - 180px no topo (empurra para baixo).
-           - 5px na direita.
-           - 0px na parte inferior.
-           - 5px na esquerda.
-           (Ainda usa pixels fixos para margens laterais, que podem ser melhorados com 'auto' ou 'padding'). */
+        width: 90%; /* A imagem ocupa 90% da largura do container. */
+        max-width: 400px; /* Limita a largura máxima. */
+        margin: 0; /* Remove margens fixas. */
     }
 
     section{
-        /* Estilos para a seção de conteúdo principal dentro da media query. */
-        margin: 0 auto;
-        /* Centraliza a seção horizontalmente (0px de margem superior/inferior,
-           'auto' para margens laterais iguais). */
-        width: 90%;
-        /* A seção ocupa 90% da largura disponível do seu container pai (main). */
-        text-align: center;
-        /* Centraliza todo o texto dentro da seção. */
-        padding-top: 5%;
-        /* Adiciona um preenchimento interno de 5% da largura do pai no topo da seção. */
+        margin: 0 auto; /* Centraliza a seção horizontalmente. */
+        width: 90%; /* A seção ocupa 90% da largura do container. */
+        text-align: center; /* Centraliza todo o texto dentro da seção. */
+        padding-top: 0; /* Ajustado para usar 'gap' no 'main'. */
     }
 
     h1{
-        /* Estilos para o título principal (h1) dentro da media query. */
-        font-size: 50px;
-        /* Reduz o tamanho da fonte para 50 pixels para telas menores. */
-        line-height: 58px;
-        /* Ajusta a altura da linha para 58 pixels. */
+        font-size: clamp(2.5rem, 8vw, 3.125rem); /* Tamanho de fonte fluido para mobile. */
+        line-height: 1.2;
     }
 
     h2{
-        /* Estilos para o subtítulo (h2) dentro da media query. */
-        font-size: 28px;
-        /* Reduz o tamanho da fonte para 28 pixels para telas menores. */
-        line-height: 34px;
-        /* Ajusta a altura da linha para 34 pixels. */
+        font-size: clamp(1.5rem, 5vw, 1.75rem); /* Tamanho de fonte fluido para mobile. */
+        line-height: 1.2;
     }
 
     p{
-        /* Estilos para o parágrafo (p) dentro da media query. */
-        display: none;
-        /* Oculta completamente o parágrafo em telas com largura de até 800px. */
+        display: none; /* Oculta o parágrafo em telas menores. */
     }
 
-    button{
-        /* Estilos para TODOS os botões dentro da media query.
-           (Este seletor genérico pode não ser o ideal se houver mais de um botão visível). */
-        margin: 15px auto;/* Adiciona uma margem de 15px no topo/inferior e centraliza o botão horizontalmente. */
+    .button-main{
+        margin: 30px auto 0 auto; /* Margem superior e centralização. */
+        width: 100%; /* Botão ocupa a largura total. */
+        max-width: 300px; /* Limita a largura máxima. */
+        padding: 15px 0; /* Ajusta o padding. */
     }
 }

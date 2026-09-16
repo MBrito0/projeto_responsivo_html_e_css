@@ -18,7 +18,7 @@
     display: inline-block;
     width: 60%;
     padding-left: 136px;
-    margin-top: 16%;
+    margin-top: 13%;
 }
 
 .container-right{
@@ -31,22 +31,22 @@
 
 img{
     position: relative;
-    top: 20%;
-    right: 130px;
+    top: 13%;
+    right: 60px;
 }
 
 h1{
-    font-size: 70px;
+    font-size: 65px;
     line-height: 80px;
     width: 368px;
 }
 
 p{
-    font-size: 28px;
-    line-height: 48px;
+    font-size: 25px;
+    line-height: 38px;
     opacity: 0.6;
     margin: 15px 0;
-    width: 540px;
+    width: 570px;
 }
 
 button{
